@@ -1,0 +1,23 @@
+<div class="container-lg">
+    <!-- <router-outlet></router-outlet> -->
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let num of testList">
+                <td>{{num.slNo}}</td>
+                <td>{{num.name}}</td>
+                <td>
+                    <!-- <button class="btn btn-secondary" (click)="gotoLink(num.slNo) ">Link</button> -->
+                    <button class="btn btn-secondary" [routerLink]="['test/',num.slNo,'det1']">Link</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
